@@ -1,0 +1,90 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="register" (ngSubmit)="onSubmit(register.value)">
+    <ion-list color="background">
+
+      <ion-item>
+        <ion-label>First Name</ion-label>
+        <ion-input formControlName="firstname" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Middle Name</ion-label>
+        <ion-input formControlName="middlename" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Last Name</ion-label>
+        <ion-input formControlName="lastname" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>ReType - Password</ion-label>
+        <ion-input formControlName="confirmpass" type="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>City</ion-label>
+        <ion-input formControlName="city" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>State</ion-label>
+        <ion-input formControlName="state" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Country</ion-label>
+        <ion-input formControlName="country" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone Number</ion-label>
+        <ion-input formControlName="pnumber" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-input formControlName="age" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Class</ion-label>
+        <ion-input formControlName="class" type="text"></ion-input>
+      </ion-item>
+
+      <button block ion-button full ion-button icon-left color="background" round type="submit">
+        <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+        Add Teacher
+      </button>
+    </ion-list>
+
+  </form>
+
+
+</ion-content>

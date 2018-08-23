@@ -1,0 +1,14 @@
+{
+  "name": "khalsaSchoolClient",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies" : [
+    {
+      "path" : "/endpoints",
+      "proxyUrl" : "http://localhost:3000"
+    }
+  ]
+}

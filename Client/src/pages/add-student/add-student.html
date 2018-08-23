@@ -1,0 +1,345 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add Student</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div padding>
+    <ion-segment [(ngModel)]="children">
+      <ion-segment-button color="background" value="parent">
+        Parent
+      </ion-segment-button>
+      <ion-segment-button color="background" value="child1">
+        Child 1
+      </ion-segment-button>
+      <ion-segment-button color="background" value="child2">
+        Child 2
+      </ion-segment-button>
+      <ion-segment-button color="background" value="child3">
+        Child 3
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="children">
+    <ion-list *ngSwitchCase="'parent'">
+      <ion-item>
+        <ion-label>First Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Middle Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+
+        <ion-label>Last Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email Secondary</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Registration</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>DOB</ion-label>
+        <ion-datetime displayFormat="MM-DD-YYYY" [(ngModel)]="today"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Address</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>City</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>State</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Zip-Code</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Address Secondary</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>City</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>State</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Zip-Code</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone Number 1</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone Number 2</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <button block ion-button full ion-button icon-left color="background" round (click)="addchild()">
+        <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+        Add Me
+      </button>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'child1'">
+      <ion-item>
+        <ion-label>First Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Middle Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+
+        <ion-label>Last Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>DOB</ion-label>
+        <ion-datetime displayFormat="MM-DD-YYYY" [(ngModel)]="today"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Kirtan</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tanti Saaj</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tabla</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Harmonium</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Registration Year</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Class</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+
+      <button block ion-button full ion-button icon-left color="background" round (click)="addchild()">
+        <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+        Add child
+      </button>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'child2'">
+
+      <ion-item>
+        <ion-label>First Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Middle Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+
+        <ion-label>Last Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>DOB</ion-label>
+        <ion-datetime displayFormat="MM-DD-YYYY" [(ngModel)]="today"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Kirtan</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tanti Saaj</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tabla</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Harmonium</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Registration Year</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Class</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+
+      <button block ion-button full ion-button icon-left color="background" round (click)="addchild()">
+        <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+        Add child
+      </button>
+
+
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'child3'">
+      <ion-item>
+        <ion-label>First Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Middle Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+
+        <ion-label>Last Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>DOB</ion-label>
+        <ion-datetime displayFormat="MM-DD-YYYY" [(ngModel)]="today"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Kirtan</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tanti Saaj</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tabla</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Harmonium</ion-label>
+        <ion-toggle color="background" checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Registration Year</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Class</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+
+      <button block ion-button full ion-button icon-left color="background" round (click)="addchild()">
+        <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+        Add child
+      </button>
+
+    </ion-list>
+  </div>
+
+</ion-content>

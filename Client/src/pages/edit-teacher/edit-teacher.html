@@ -1,0 +1,91 @@
+<!--
+  Generated template for the EditTeacherPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="background">
+    <ion-title>Edit Teacher</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="editTeacher" (ngSubmit)="onSubmit(editTeacher.value, teacher.id)">
+    <ion-list color="background">
+
+      <ion-item>
+        <ion-label>First Name</ion-label>
+        <ion-input formControlName="firstname" type="text" value="{{teacher.description.firstname}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Middle Name</ion-label>
+        <ion-input formControlName="middlename" type="text" value="{{teacher.description.middlename}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Last Name</ion-label>
+        <ion-input formControlName="lastname" type="text" value="{{teacher.description.lastname}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input formControlName="password" type="password" value="{{teacher.description.password}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>City</ion-label>
+        <ion-input formControlName="city" type="text" value="{{teacher.description.city}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>State</ion-label>
+        <ion-input formControlName="state" type="text" value="{{teacher.description.state}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Country</ion-label>
+        <ion-input formControlName="country" type="text" value="{{teacher.description.country}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone Number</ion-label>
+        <ion-input formControlName="pnumber" type="text" value="{{teacher.description.pnumber}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-input formControlName="age" type="text" value="{{teacher.description.age}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input formControlName="email" type="email" value="{{teacher.description.email}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Class</ion-label>
+        <ion-input formControlName="class" type="text" value="{{teacher.description.class}}"></ion-input>
+      </ion-item>
+
+      <button block ion-button full ion-button icon-left color="background" round type="submit">
+        <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+        Update Teacher
+      </button>
+
+    </ion-list>
+
+
+  </form>
+
+  <button block ion-button full ion-button icon-left round color="danger" (click)="delete(teacher.id)" padding>
+      <ion-icon name="trash"></ion-icon>
+      Delete
+    </button>
+
+</ion-content>

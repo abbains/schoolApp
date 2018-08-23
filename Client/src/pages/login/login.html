@@ -1,0 +1,54 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <img src="../../assets/imgs/logoschool.png" />
+  </ion-card>
+
+  <h1 ion-text full text-center bold color="background">ਖਾਲਸਾ ਸਕੂਲ</h1>
+
+  <!-- setting up list item for the login credentials with reactive form using Formbuilder-->
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-input type="email" formControlName="email" placeholder="@email.com"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" formControlName="password" placeholder="password"></ion-input>
+      </ion-item>
+
+      <!-- button for confirmation -->
+
+      <button ion-button full ion-button icon-left color="background" type="submit" round [disabled]="!loginForm.valid">
+        <ion-icon ios="ios-school" md="md-school"></ion-icon>
+        Login
+      </button>
+
+  </ion-list>
+  </form>
+<!-- 
+  registeration button
+  <button ion-button full ion-button icon-left color="background" round (click)="registerPage()" *ngIf="!teacher" padding>
+    <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+    Rigister
+  </button> -->
+
+</ion-content>
