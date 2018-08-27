@@ -5,7 +5,7 @@ import * as Sequelize from 'sequelize';
 const log = require("./logger").log;
 
 
-export const sequilize = new Sequelize('postgres://qnsfwisi:Jt9VsRBpStZtyHLz8uqjykqhr1WUE--_@elmer.db.elephantsql.com:5432/qnsfwisi');
+export const sequilize = new Sequelize('DB link here');
 
 //checking if the database is connected 
 sequilize.authenticate()
