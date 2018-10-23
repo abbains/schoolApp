@@ -1,8 +1,10 @@
-# schoolApp
-This is a basic Khalsa School App on * Ionic * NodeJS 
+# School App
+This is a basic Khalsa School App on 
+* Ionic 
+* NodeJS 
 
-# Using
+Using
 
-# webpack
-# TypeScript
+* webpack
+* TypeScript
 
